@@ -58,16 +58,16 @@
 
 .navbar .links a{
     text-decoration: none;
-    color:#111;
+    color:#bf0603;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
 }
 
 .navbar .logo p{
     font-size: 25px;
     font-weight: 700;
-    color:#311000;
+    color:#bf0603;
     font-family: "MonteCarlo", cursive;
   font-weight: 900;
   font-style: normal;
@@ -76,6 +76,100 @@
 
 .hero-slider{
     width:100%;
-    height: 80vh;
-    background-color: red;
+    height: 90vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slider .img-wrapper{
+    background-color: #f2f2f2;
+    height: 100%;
+    /* width: 700px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slider .img-wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.cateogory-section{
+    background-color: #f2f2f2;
+    height: 60vh;
+    display:  flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: auto; /* allow horizontal scrolling when items overflow */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.cateogory-section .product-card{
+    background-color: white;
+    height: 100%;
+    width: 300px;
+    flex: 0 0 350px; 
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Optional: style the horizontal scrollbar for better UX */
+.cateogory-section::-webkit-scrollbar{
+    height: 2px;
+}
+.cateogory-section::-webkit-scrollbar-thumb{
+    background: #ff4340;
+    border-radius: 6px;
+}
+.cateogory-section::-webkit-scrollbar-track{
+    background: white;
+}
+
+
+.cateogory-section .product-card a{
+    position: absolute;
+    bottom: 20px; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+.cateogory-section .product-card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.4s all ease-out;
+    -webkit-transition: 0.4s all ease-out;
+    -moz-transition: 0.4s all ease-out;
+    -ms-transition: 0.4s all ease-out;
+    -o-transition: 0.4s all ease-out;
+}
+
+
+.cateogory-section .product-card img:hover{
+    scale: 105%;   
+}
+
+
+.simple-heading{
+    padding: 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #311000;
 }
