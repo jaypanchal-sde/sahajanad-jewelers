@@ -165,11 +165,198 @@
 
 .simple-heading{
     padding: 10px;
-    font-size: 30px;
+    font-size: 50px;
     text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 500;
     color: #311000;
+}
+
+
+.heading-style-1{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+
+.main-heading{
+   font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #311000;
+}
+
+.sub-heading{
+     font-size: 20px;
+     font-weight: 600;
+     color: #bf0603;
+     text-transform: uppercase;
+}
+
+
+
+.collection-section{
+    background-color: #f2f2f2;
+    height: 80vh;
+    display: flex;
+    overflow-x: auto;
+    gap: 5px;
+}
+
+
+.collection-section::-webkit-scrollbar{
+    height: 2px;
+}
+.collection-section::-webkit-scrollbar-thumb{
+    background: #ff4340;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.collection-section::-webkit-scrollbar-track{
+    background: white;
+}
+
+.collection-card{
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    background-color: #f2f2f2;
+    height: 100%;
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.collection-card img,
+.collection-card video{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.25s ease-in-out;
+    will-change: opacity;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out;
+    -ms-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out;
+}
+
+.collection-card img{
+    z-index: 1;
+    opacity: 1;
+}
+
+.collection-card video{
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.collection-card:hover img{
+    opacity: 0;
+}
+
+.collection-card:hover video{
+    opacity: 1;
+}
+
+.collection-card .des{
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.35);
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+}
+
+
+.collection-card .collection-name{
+    font-size: 20px;
+    color: #f2f2f2;
+}
+
+.collection-card .collection-des{
+    font-size: 18px;
+    color: #f2f2f2;
+    padding-bottom: 10px;
+}
+
+.collection-card .explore-btn{
+    background-color:transparent;
+    border: 1px solid white;
+    padding: 10px 40px;
+    width: 100%;
+    color: white;
+    transition: 0.3s all ease-out;
+    -webkit-transition: 0.3s all ease-out;
+    -moz-transition: 0.3s all ease-out;
+    -ms-transition: 0.3s all ease-out;
+    -o-transition: 0.3s all ease-out;
+}
+
+.collection-card:hover .explore-btn,
+.collection-card:hover .explore-btn,
+.collection-card .explore-btn:hover{
+    background-color:#f2f2f2;
+    color: #bf0603;
+}
+
+@keyframes btnPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(191, 6, 3, 0.7);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 8px rgba(191, 6, 3, 0);
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+}
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(191, 6, 3, 0);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+}
+
+.explore-btn.clicked {
+    animation: btnPulse 0.5s ease-out;
+    -webkit-animation: btnPulse 0.5s ease-out;
+}
+
+.promise-heading{
+    display: flex;
+    font-size: 50px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+}
+
+.promise-subheading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    width: 50%;
+    color: #bf0603;
 }
