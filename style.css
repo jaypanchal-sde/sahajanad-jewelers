@@ -284,6 +284,8 @@ body{
     width: 100%;
     overflow-x: auto; /* allow horizontal scrolling when items overflow */
     overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -295,6 +297,7 @@ body{
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    scroll-snap-align: start;
 }
 
 /* Optional: style the horizontal scrollbar for better UX */
@@ -381,6 +384,8 @@ body{
     height: 80vh;
     display: flex;
     overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
     gap: 5px;
 }
 
@@ -408,6 +413,7 @@ body{
     width: 400px;
     position: relative;
     overflow: hidden;
+    scroll-snap-align: start;
 }
 
 .collection-card img,
