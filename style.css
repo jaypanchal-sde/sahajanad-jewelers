@@ -436,11 +436,11 @@ body{
     pointer-events: none;
 }
 
-.collection-card:hover img{
+.collection-card.is-playing img{
     opacity: 0;
 }
 
-.collection-card:hover video{
+.collection-card.is-playing video{
     opacity: 1;
 }
 
